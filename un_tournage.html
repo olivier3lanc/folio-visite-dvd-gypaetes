@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<!--
+		Supersized - Fullscreen Slideshow jQuery Plugin
+		Version 3.1.3
+		www.buildinternet.com/project/supersized
+		
+		By Sam Dunn / One Mighty Roar (www.onemightyroar.com)
+		Released under MIT License / GPL License
+	-->
+
+<head>
+<title>Un Tournage...</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=8" />
+<link rel="stylesheet" href="css/supersized.css" type="text/css" media="screen" />
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/supersized.3.1.3.min.js"></script>
+<script type="text/javascript">  
+			
+			jQuery(function($){
+				$.supersized({
+				
+					//Functionality
+					slideshow               :   1,		//Slideshow on/off
+					autoplay				:	1,		//Slideshow starts playing automatically
+					start_slide             :   1,		//Start slide (0 is random)
+					random					: 	0,		//Randomize slide order (Ignores start slide)
+					slide_interval          :   6000,	//Length between transitions
+					transition              :   1, 		//0-None, 1-Fade, 2-Slide Top, 3-Slide Right, 4-Slide Bottom, 5-Slide Left, 6-Carousel Right, 7-Carousel Left
+					transition_speed		:	2000,	//Speed of transition
+					new_window				:	1,		//Image links open in new window/tab
+					pause_hover             :   0,		//Pause slideshow on hover
+					keyboard_nav            :   1,		//Keyboard navigation on/off
+					performance				:	3,		//0-Normal, 1-Hybrid speed/quality, 2-Optimizes image quality, 3-Optimizes transition speed // (Only works for Firefox/IE, not Webkit)
+					image_protect			:	1,		//Disables image dragging and right click with Javascript
+					image_path				:	'img/', //Default image path
+
+					//Size & Position
+					min_width		        :   1024,		//Min width allowed (in pixels)
+					min_height		        :   768,		//Min height allowed (in pixels)
+					vertical_center         :   1,		//Vertically center background
+					horizontal_center       :   1,		//Horizontally center background
+					fit_portrait         	:   1,		//Portrait images will not exceed browser height
+					fit_landscape			:   0,		//Landscape images will not exceed browser width
+					
+					//Components
+					navigation              :   1,		//Slideshow controls on/off
+					thumbnail_navigation    :   1,		//Thumbnail navigation
+					slide_counter           :   1,		//Display slide numbers
+					slide_captions          :   1,		//Slide caption (Pull from "title" in slides array)
+					slides 					:  	[		//Slideshow Images
+											{image : 'img/le_tournage/Tournage_Haute-Savoie_06_Antoine_Rezer.jpg', title : 'Tournage à ski en Haute-Savoie'},
+											{image : 'img/le_tournage/Tournage_Haute-Savoie_07_Antoine_Rezer.jpg', title : 'Mathieu - Tournage en Haute-Savoie'},
+											{image : 'img/le_tournage/Tournage_hiver_Vanoise_05_Jean-Luc_Danis.jpg', title : 'Mathieu dans les réglages de son appareil - Vanoise'},
+											{image : 'img/le_tournage/Tournage_Hohe_Tauern_Autriche_Antoine_Rezer.jpg', title : 'Mathieu sur le tournage en Autriche'},
+											{image : 'img/le_tournage/Tournage_Pointe_Dzerat_Antoine_Rezer.jpg', title : 'Mathieu en tournage près de la Pointe Dzerat - Haute-Savoie'},
+											{image : 'img/le_tournage/Tournage_Vanoise_Antoine_Rezer.jpg', title : 'Mathieu et son Canon EOS 5D MarkII - Tournage en Haute-Savoie'},
+											{image : 'img/le_tournage/600.jpg', title : 'Mathieu équipé d\'un téléobjectif 600mm - Vanoise'},
+											{image : 'img/le_tournage/600_jl.jpg', title : 'Jean-Luc Danis et son téléobjectif 600mm'},
+											{image : 'img/le_tournage/Mat_Action_Rosuel.jpg', title : 'Mathieu en plein tournage à Rosuel en hiver - Vanoise'},
+											{image : 'img/le_tournage/Mat_Millet_vallee_Rosuel.jpg', title : 'Mathieu en session de tournage à Rosuel - Vanoise'},
+											{image : 'img/le_tournage/Mat_Vercors.jpg', title : 'Mathieu en tournage dans le Vercors'},
+											{image : 'img/le_tournage/Tournage_Haute-Savoie_01_Antoine_Rezer.jpg', title : 'Tournage en Haute-Savoie'},
+											{image : 'img/le_tournage/Tournage_Haute-Savoie_03_Antoine_Rezer.jpg', title : 'Tournage en Haute-Savoie'},
+											{image : 'img/le_tournage/Tournage_Haute-Savoie_04_Antoine_Rezer.jpg', title : 'Tournage en Haute-Savoie'},
+											{image : 'img/le_tournage/Tournage_Haute-Savoie_05_Antoine_Rezer.jpg', title : 'Tournage en Haute-Savoie'}
+												]
+				}); 
+		    });
+		    
+		</script>
+
+
+</head>
+
+<body>
+<div id="content">
+  <div class="titre-page">
+    <h1><a href="index.html" title="Retour accueil">Des Gypaètes et des Hommes</a></h1>
+    <p id="unfilmde">Un film de Mathieu Le Lay</p>
+  </div>
+</div>
+
+<!--Thumbnail Navigation-->
+<div id="prevthumb"></div>
+<div id="nextthumb"></div>
+
+<!--Control Bar-->
+<div id="controls-wrapper">
+  <div id="controls"> 
+    
+    <!--Slide counter-->
+    <div id="slidecounter"> <span class="slidenumber"></span>/<span class="totalslides"></span> </div>
+    
+    <!--Slide captions displayed here-->
+    <div id="slidecaption"></div>
+    
+    <!--Navigation-->
+    <div id="navigation"> <img id="prevslide" src="img/back_dull.png"/><img id="pauseplay" src="img/pause_dull.png"/><img id="nextslide" src="img/forward_dull.png"/> </div>
+    
+</div>
+</body>
+</html>

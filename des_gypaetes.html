@@ -1,0 +1,148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<!--
+		Supersized - Fullscreen Slideshow jQuery Plugin
+		Version 3.1.3
+		www.buildinternet.com/project/supersized
+		
+		By Sam Dunn / One Mighty Roar (www.onemightyroar.com)
+		Released under MIT License / GPL License
+	-->
+
+<head>
+<title>Des Gypaètes...</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=8" />
+<link rel="stylesheet" href="css/supersized.css" type="text/css" media="screen" />
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/supersized.3.1.3.min.js"></script>
+<script type="text/javascript">  
+			
+			jQuery(function($){
+				$.supersized({
+				
+					//Functionality
+					slideshow               :   1,		//Slideshow on/off
+					autoplay				:	1,		//Slideshow starts playing automatically
+					start_slide             :   1,		//Start slide (0 is random)
+					random					: 	0,		//Randomize slide order (Ignores start slide)
+					slide_interval          :   6000,	//Length between transitions
+					transition              :   1, 		//0-None, 1-Fade, 2-Slide Top, 3-Slide Right, 4-Slide Bottom, 5-Slide Left, 6-Carousel Right, 7-Carousel Left
+					transition_speed		:	3000,	//Speed of transition
+					new_window				:	1,		//Image links open in new window/tab
+					pause_hover             :   0,		//Pause slideshow on hover
+					keyboard_nav            :   1,		//Keyboard navigation on/off
+					performance				:	3,		//0-Normal, 1-Hybrid speed/quality, 2-Optimizes image quality, 3-Optimizes transition speed // (Only works for Firefox/IE, not Webkit)
+					image_protect			:	1,		//Disables image dragging and right click with Javascript
+					image_path				:	'img/', //Default image path
+
+					//Size & Position
+					min_width		        :   1024,		//Min width allowed (in pixels)
+					min_height		        :   768,		//Min height allowed (in pixels)
+					vertical_center         :   1,		//Vertically center background
+					horizontal_center       :   1,		//Horizontally center background
+					fit_portrait         	:   1,		//Portrait images will not exceed browser height
+					fit_landscape			:   0,		//Landscape images will not exceed browser width
+					
+					//Components
+					navigation              :   1,		//Slideshow controls on/off
+					thumbnail_navigation    :   1,		//Thumbnail navigation
+					slide_counter           :   1,		//Display slide numbers
+					slide_captions          :   1,		//Slide caption (Pull from "title" in slides array)
+					slides 					:  	[		//Slideshow Images
+						  {image : 'img/des_gypaetes/jean_luc_danis/Gypaete_jeune_pepite_jean_luc_danis_20.jpg', title : 'Pépite - Jeune Gypaète Barbu - Vanoise - &copy; Jean-Luc Danis'},
+						  {image : 'img/des_gypaetes/jean_luc_danis/Gypate_adulte_jean_luc_danis.jpg', title : 'Gypaète Barbu adulte - Vanoise - &copy; Jean-Luc Danis'},
+						  {image : 'img/des_gypaetes/jean_luc_danis/DSC_2485_5839.jpg', title : 'Gypaète Barbu adulte - Vanoise - &copy; Jean-Luc Danis'},
+						  {image : 'img/des_gypaetes/jean_luc_danis/Gypaete_jeune_pepite_jean_luc_danis_01.jpg', title : 'Pépite - Jeune Gypaète Barbu - Vanoise - &copy; Jean-Luc Danis'},
+						  {image : 'img/des_gypaetes/jean_luc_danis/Gypaete_jeune_pepite_jean_luc_danis_02.jpg', title : 'Pépite - Jeune Gypaète Barbu - Vanoise - &copy; Jean-Luc Danis'},
+						  {image : 'img/des_gypaetes/jean_luc_danis/Gypaete_jeune_pepite_jean_luc_danis_03.jpg', title : 'Pépite - Jeune Gypaète Barbu - Vanoise - &copy; Jean-Luc Danis'},
+						  {image : 'img/des_gypaetes/jean_luc_danis/Gypaete_jeune_pepite_jean_luc_danis_04.jpg', title : 'Pépite - Jeune Gypaète Barbu - Vanoise - &copy; Jean-Luc Danis'},
+						  {image : 'img/des_gypaetes/jean_luc_danis/Gypaete_jeune_pepite_jean_luc_danis_05.jpg', title : 'Pépite - Jeune Gypaète Barbu - Vanoise - &copy; Jean-Luc Danis'},
+						  {image : 'img/des_gypaetes/jean_luc_danis/Gypaete_jeune_pepite_jean_luc_danis_06.jpg', title : 'Pépite - Jeune Gypaète Barbu - Vanoise - &copy; Jean-Luc Danis'},
+						  {image : 'img/des_gypaetes/jean_luc_danis/Gypaete_jeune_pepite_jean_luc_danis_07.jpg', title : 'Pépite - Jeune Gypaète Barbu - Vanoise - &copy; Jean-Luc Danis'},
+						  {image : 'img/des_gypaetes/jean_luc_danis/Gypaete_jeune_pepite_jean_luc_danis_08.jpg', title : 'Pépite - Jeune Gypaète Barbu - Vanoise - &copy; Jean-Luc Danis'},
+						  {image : 'img/des_gypaetes/jean_luc_danis/Gypaete_jeune_pepite_jean_luc_danis_10.jpg', title : 'Pépite - Jeune Gypaète Barbu - Vanoise - &copy; Jean-Luc Danis'},
+						  {image : 'img/des_gypaetes/jean_luc_danis/Gypaete_jeune_pepite_jean_luc_danis_11.jpg', title : 'Pépite - Jeune Gypaète Barbu - Vanoise - &copy; Jean-Luc Danis'},
+						  {image : 'img/des_gypaetes/jean_luc_danis/Gypaete_jeune_pepite_jean_luc_danis_13.jpg', title : 'Pépite - Jeune Gypaète Barbu - Vanoise - &copy; Jean-Luc Danis'},
+						  {image : 'img/des_gypaetes/jean_luc_danis/Gypaete_jeune_pepite_jean_luc_danis_15.jpg', title : 'Pépite - Jeune Gypaète Barbu - Vanoise - &copy; Jean-Luc Danis'},
+						  {image : 'img/des_gypaetes/jean_luc_danis/gypaetes-barbus-adultes-en-vol-vanoise-parade.jpg', title : 'Parade de 2 Gypaètes Barbus adultes - Vanoise - &copy; Jean-Luc Danis'},
+						  {image : 'img/des_gypaetes/jean_luc_danis/gypaete-adulte-en-vol-val-isere.jpg', title : 'Gypaète Barbu adulte en vol - Val d\'Isère - &copy; Jean-Luc Danis'},
+						  {image : 'img/des_gypaetes/jean_luc_danis/Gypate_adulte_jean_luc_danis.jpg', title : 'Plumage d\'un Gypaète Barbu adulte - Vanoise - &copy; Jean-Luc Danis'},
+						  {image : 'img/des_gypaetes/jean_luc_danis/gypaete-barbu-adulte-en-vol-vanoise-gros-plan2.jpg', title : 'Gros plan de Gypaète Barbu adulte en vol - Vanoise - &copy; Jean-Luc Danis'},
+						  {image : 'img/des_gypaetes/jean_luc_danis/gypaete-barbu-adulte-en-vol-vanoise-gros-plan.jpg', title : 'Gros plan de Gypaète Barbu adulte en vol - Vanoise - &copy; Jean-Luc Danis'},
+						  {image : 'img/des_gypaetes/jean_luc_danis/gypaete-barbu-adulte-en-vol-vanoise.jpg', title : 'Gypaète Barbu adulte en vol - Vanoise - &copy; Jean-Luc Danis'},
+						  {image : 'img/des_gypaetes/jean_luc_danis/gypaete-barbu-adulte-en-vol-vanoise-cascade-falaise.jpg', title : 'Gypaète Barbu adulte en vol près d\'une cascade de glace - Vanoise - &copy; Jean-Luc Danis'},
+						  {image : 'img/des_gypaetes/jean_luc_danis/gypaete-barbu-adulte-en-vol-vanoise-bain-de-boue.jpg', title : 'Gypaète Barbu adulte en vol après un bain de boue - Vanoise - &copy; Jean-Luc Danis'},
+						  {image : 'img/des_gypaetes/jean_luc_danis/gypaete-barbu-adulte-en-vol-vanoise-du-dessus-hiver.jpg', title : 'Gypaète Barbu adulte en vol en hiver - Vanoise - &copy; Jean-Luc Danis'},
+						  {image : 'img/des_gypaetes/Plumage.jpg', title : 'Plumage d\'un Gypaète Barbu adulte - &copy; Mathieu Le Lay'},
+						  {image : 'img/des_gypaetes/espagne/Gypaete_adulte_charnier_Espagne.jpg', title : 'Gypaète Barbu adulte - Charnier - Espagne - &copy; Mathieu Le Lay'},
+						  {image : 'img/des_gypaetes/espagne/Gypaete_adulte_espagne.jpg', title : 'Gypaète Barbu adulte - Charnier - Espagne - &copy; Mathieu Le Lay'},
+						  {image : 'img/des_gypaetes/espagne/Gypaete_charnier.jpg', title : 'Gypaètes Barbus adultes - Charnier - Espagne - &copy; Mathieu Le Lay'},
+						  {image : 'img/des_gypaetes/espagne/Gypaetes_charnier_Espagne.jpg', title : 'Gypaète Barbu adulte - Charnier - Espagne - &copy; Mathieu Le Lay'},
+						  {image : 'img/des_gypaetes/espagne/Immature_charnier.jpg', title : 'Gypaète Barbu immature - Charnier - Espagne - &copy; Mathieu Le Lay'},
+						  {image : 'img/des_gypaetes/espagne/Immature_Spain.jpg', title : 'Gypaète Barbu immature - Charnier - Espagne - &copy; Mathieu Le Lay'},
+						  {image : 'img/des_gypaetes/espagne/Juvenile_os_Espagne.jpg', title : 'Gypaète Barbu juvénile - Charnier - Espagne - &copy; Mathieu Le Lay'},
+						  {image : 'img/des_gypaetes/haute_savoie/Gypa_adulte_Sixt_haute_savoie_01.jpg', title : 'Gypaète Barbu adulte - Haute-Savoie - &copy; Mathieu Le Lay'},
+						  {image : 'img/des_gypaetes/haute_savoie/Gypa_adulte_Sixt_haute_savoie_02.jpg', title : 'Gypaète Barbu adulte - Haute-Savoie - &copy; Mathieu Le Lay'},
+						  {image : 'img/des_gypaetes/haute_savoie/Gypa_adulte_Sixt_haute_savoie_03.jpg', title : 'Gypaète Barbu adulte - Haute-Savoie - &copy; Mathieu Le Lay'},
+						  {image : 'img/des_gypaetes/vanoise/Vanoise_Primevert_pente_01.jpg', title : 'Primevert - Gypaète Barbu juvénile - Vanoise - &copy; Mathieu Le Lay'},
+						  {image : 'img/des_gypaetes/vanoise/Gyp_pointe-percee.jpg', title : 'Gypaète Barbu adulte et la Pointe Percée - Vanoise - &copy; Mathieu Le Lay'},
+						  {image : 'img/des_gypaetes/vanoise/Mating_BV_Vanoise.jpg', title : 'Accouplement de Gypaètes Barbus adultes - Vanoise - &copy; Mathieu Le Lay'},
+						  {image : 'img/des_gypaetes/vanoise/Primevert.jpg', title : 'Primevert - Gypaète Barbu juvénile - Vanoise - &copy; Mathieu Le Lay'},
+						  {image : 'img/des_gypaetes/antoine_rezer/gypaete-adulte-en-vol-savoie2.jpg', title : 'Gypaète Barbu adulte en vol - Savoie - &copy; Antoine Rezer'},
+						  {image : 'img/des_gypaetes/antoine_rezer/gypaete-adulte-gros-plan.jpg', title : 'Gypaète Barbu adulte en vol - Gros plan - Haute-Savoie - &copy; Antoine Rezer'},
+						  {image : 'img/des_gypaetes/antoine_rezer/gypaete-adulte-gros-plan2.jpg', title : 'Gypaète Barbu adulte en vol - Gros plan - Haute-Savoie - &copy; Antoine Rezer'},
+						  {image : 'img/des_gypaetes/antoine_rezer/gypaete-adulte-sur-perchoir.jpg', title : 'Gypaète Barbu adulte sur perchoir - Haute-Savoie - &copy; Antoine Rezer'},
+						  {image : 'img/des_gypaetes/antoine_rezer/gypaete-adulte-vol-hivernal.jpg', title : 'Gypaète Barbu adulte en vol hivernal - Haute-Savoie - &copy; Antoine Rezer'},
+						  {image : 'img/des_gypaetes/antoine_rezer/gypaete-adulte-vol-hivernal2.jpg', title : 'Gypaète Barbu adulte en vol hivernal - Haute-Savoie - &copy; Antoine Rezer'},
+						  {image : 'img/des_gypaetes/antoine_rezer/gypaete-adulte-vol-hivernal3.jpg', title : 'Gypaète Barbu adulte en vol hivernal - Haute-Savoie - &copy; Antoine Rezer'},
+						  {image : 'img/des_gypaetes/antoine_rezer/gypaete-adulte-vol-hivernal4.jpg', title : 'Gypaète Barbu adulte en vol hivernal - Haute-Savoie - &copy; Antoine Rezer'},
+						  {image : 'img/des_gypaetes/antoine_rezer/gypaete-barbu-juvenile-vanoise.jpg', title : 'Gypaète Barbu juvénile - Vanoise - &copy; Antoine Rezer'},
+						  {image : 'img/des_gypaetes/antoine_rezer/gypaete-juvenile-en-vol.jpg', title : 'Gypaète Barbu juvénile en vol - Haute-Savoie - &copy; Antoine Rezer'},
+						  {image : 'img/des_gypaetes/antoine_rezer/gypaete-juvenile-en-vol-pointe-percee.jpg', title : 'Gypaète Barbu juvénile en vol - Pointe Percée - Haute-Savoie - &copy; Antoine Rezer'},
+						  {image : 'img/des_gypaetes/antoine_rezer/gypaete-juvenile-en-vol-saix-noir.jpg', title : 'Gypaète Barbu juvénile en vol - Haute-Savoie - &copy; Antoine Rezer'},
+						  {image : 'img/des_gypaetes/antoine_rezer/gypaetes-barbus-adultes-aire.jpg', title : 'Gypaètes Barbu adultes - Perchoir - Mercantour - &copy; Antoine Rezer'},
+						  {image : 'img/des_gypaetes/antoine_rezer/gypaete-adulte-en-train-de-bailler.jpg', title : 'Gypaète Barbu en train de bâiller - Haute-Savoie - &copy; Antoine Rezer'},
+						  {image : 'img/des_gypaetes/antoine_rezer/gypaete-adulte-en-vol-falaise.jpg', title : 'Gypaète Barbu adulte longeant la falaise - Haute-Savoie - &copy; Antoine Rezer'},
+						  {image : 'img/des_gypaetes/antoine_rezer/gypaete-adulte-en-vol-haute-savoie.jpg', title : 'Gypaète Barbu adulte en vol - Haute-Savoie - &copy; Antoine Rezer'},
+						  {image : 'img/des_gypaetes/antoine_rezer/gypaete-adulte-en-vol-rosuel.jpg', title : 'Gypaète Barbu adulte en vol - Rosuel - &copy; Antoine Rezer'},
+						  {image : 'img/des_gypaetes/antoine_rezer/gypaete-adulte-en-vol-savoie.jpg', title : 'Gypaète Barbu adulte en vol - Savoie - &copy; Antoine Rezer'}
+												]
+				}); 
+		    });
+		    
+		</script>
+
+</head>
+
+<body>
+<div id="content">
+  <div class="titre-page">
+    <h1><a href="index.html" title="Page d'accueil">Des Gypaètes et des Hommes</a></h1>
+    <p id="unfilmde">Un film de Mathieu Le Lay</p>
+  </div>
+</div>
+
+<!--Thumbnail Navigation-->
+<div id="prevthumb"></div>
+<div id="nextthumb"></div>
+
+<!--Control Bar-->
+<div id="controls-wrapper">
+  <div id="controls"> 
+    
+    <!--Slide counter-->
+    <div id="slidecounter"> <span class="slidenumber"></span>/<span class="totalslides"></span> </div>
+    
+    <!--Slide captions displayed here-->
+    <div id="slidecaption"></div>
+    
+    <!--Navigation-->
+    <div id="navigation"> <img id="prevslide" src="img/back_dull.png"/><img id="pauseplay" src="img/pause_dull.png"/><img id="nextslide" src="img/forward_dull.png"/> </div>
+    
+</div>
+</body>
+</html>
